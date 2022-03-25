@@ -15,9 +15,9 @@ Pipeline {
   }
 
     // End of stage
-    stage ("Release") {
+    stage ("Deploy") {
       steps {
-      // write release steps
+      // write deploy steps
       echo "Hello from release stage"
       }
     }
