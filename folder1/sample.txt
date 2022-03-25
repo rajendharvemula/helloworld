@@ -1,2 +1,3 @@
-test
-:wq!
+#bin/bash
+uname -a
+echo "test"
