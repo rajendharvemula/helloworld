@@ -1,29 +1,22 @@
 pipeline {
-  agent any
-  stages {
-    stage ("Build") {
-      steps {
-      // write your executable code
-      echo "Hello from Build stage"
-      }
-}
-    // End of stage
-    stage ("Test") {
-      steps {
-      // write jenkins executable code shell or java or gradle (you must install java or gradle)
-      echo "Hello from Test stage"
-      }
-  }
+    agent any
 
-    // End of stage
-    stage ("Deploy") {
-      steps {
-      // write deploy steps
-      echo "Hello from release stage"
-      }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Hello from build'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Hello from test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Hello from deploy'
+            }
+        }
     }
-    // End of stage
-    } // end of all stages
-    } // end of pipeline 
-    
-    
+}
+
